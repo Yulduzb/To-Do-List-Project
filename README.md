@@ -14,4 +14,6 @@ HTML
 CSS
 Javascript
 
+Live Preview: https://yulduzb.github.io/To-Do-List-Project/
+
 ![](To-Do-List.gif)
