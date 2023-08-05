@@ -1,46 +1,54 @@
-document.addEventListener('DOMContentLoaded', () => {
     const inputBox = document.getElementById('input-box');
-    const addButton = document.getElementById('btnEkle');
-    const DeleteButton = document.getElementById('btnSil');
-   const listContainer = document.getElementById('list-container');
+    const listContainer = document.getElementById('list-container');
 
 
-    addButton.addEventListener('click', addTask);
-    listContainer.addEventListener('click', toggleTask);
-    listContainer.addEventListener('click', deleteTask);
+  
+  
 
     function addTask() {
-        const taskText = inputBox.value.trim();      //  "inputBox" değişkenine atanmış olan giriş kutusundan metin değerini 
-                                                       //alır ve başındaki ve sonundaki boşlukları kaldırır.
-        if (taskText !== '') {
-            const li = document.createElement('li');
-            li.textContent = taskText;
+        if(inputBox.value===''){
+            alert("Lütfen bir yapilacak görev yaziniz!");
+
+        }
+        else{
+            let li=document.createElement("li");
+            li.innerHTML=inputBox.value;
             listContainer.appendChild(li);
-            inputBox.value = '';
+            let span=document.createElement("span");
+            span.innerHTML="\u00d7";
+            li.appendChild(span);
         }
+        inputBox.value="";
+        SaveData()
     }
 
-    function toggleTask(event) {
-        // Eğer tıklanan eleman bir "li" etiketi ise (yani liste öğesine tıklandıysa), işlemlere devam eder.
-        if (event.target.tagName === 'LI') {
-            // Tıklanan liste öğesinin sınıf listesine "checked" adlı bir sınıf ekler veya çıkarır (toggle).
-            // Yani, eğer liste öğesinde "checked" sınıfı yoksa ekler, varsa çıkarır.
-            event.target.classList.toggle('checked');
+    listContainer.addEventListener("click", function(e){
+        console.log(e);
+        if(e.target.tagName === "LI"){
+            e.target.classList.toggle("checked");
+            SaveData();
+            e.stopPropagation(); // Olayın yayılmasını durdur.
+
         }
+        else if(e.target.tagName === "SPAN"){
+            e.target.parentElement.remove();
+            SaveData();
+            e.stopPropagation(); // Olayın yayılmasını durdur.
+        }
+          
+    
+        
+    }, false );
+
+
+    function SaveData(){
+        localStorage.setItem("data",listContainer.inert)
     }
-
-
-
-   /* function deleteTask(event){
-        if (event.target.classList.contains('delete-btn')) {
-            const listItem = event.target.parentElement;
-            listContainer.removeChild(listItem);
-        }
-    }*/
-});  
-
-
+      
  
- 
+function showTask(){
+    listContainer.innerHTML=localStorage.getItem("data");
+}
 
+showTask();
 

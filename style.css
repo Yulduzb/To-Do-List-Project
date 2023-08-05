@@ -25,7 +25,7 @@
 
 .image{
     width: 100%;
-    margin-left: 40px;
+    margin-left: 100px;
     max-width: 500px;
     padding-top:50px;
    
@@ -38,7 +38,7 @@
     background:#2F3C7E; 
     padding: 40px 30px 70px;
     border-radius: 10px;
-    margin: 20px 50px;
+    margin: 20px 100px 20px 0;
     max-width: 700px;
     
 
@@ -139,23 +139,43 @@ ul li.checked::before{
 
 
 
+ul li span{
+    position: absolute;
+    right:0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#FBEAEB;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+ul li span:hover{
+    background: #8f9cde;
+   
+    
+}
+
+
+
+
+
 @media screen and (max-width: 1024px) {
    
     .container{
         display: flex;
         flex-direction:column-reverse;
         align-items: center;
-        justify-content: center;
+        justify-content: center;  
+    }
+
    
        
-       
-    }
 
-    .image{
-        margin: 0;
-       
-
-    }
+    
     img{
      align-self: center;
      width: 350px;
@@ -163,12 +183,16 @@ ul li.checked::before{
     }
 
     .todo-app{
+       margin: 0;
        width: 350px;
     }
 
     .row{
         width: 300px;
     }
+
+
+
     button{
     padding: 10px 30px;
     background:#ED500A;
@@ -178,6 +202,6 @@ ul li.checked::before{
     }
 
    
-    
-}
+} 
+
 
