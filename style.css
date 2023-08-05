@@ -161,6 +161,14 @@ ul li span:hover{
 
 
 
+@media screen and (max-width: 1300px) {
+    .todo-app{
+        margin-left: 50px;
+    }
+}
+
+
+
 
 
 @media screen and (max-width: 1024px) {
@@ -178,13 +186,13 @@ ul li span:hover{
     
     img{
      align-self: center;
-     width: 350px;
+     width: 450px;
     
     }
 
     .todo-app{
        margin: 0;
-       width: 350px;
+       width: 450px;
     }
 
     .row{
@@ -204,4 +212,36 @@ ul li span:hover{
    
 } 
 
+@media screen and (max-width: 600px) {
+.container{
+    width: 100%;
+}
 
+img{
+    align-self: center;
+    width: 250px;
+    margin: 0;
+   
+   }
+
+   .todo-app{
+    width: 350px;
+   }
+
+   .row{
+    width: 250px;
+}
+
+
+
+button{
+padding: 10px 20px;
+background:#ED500A;
+border-radius: 20px;
+color:#FBEAEB;
+font-size: 15px; 
+}
+
+
+
+}
