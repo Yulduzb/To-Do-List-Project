@@ -38,8 +38,9 @@
     background:#2F3C7E; 
     padding: 40px 30px 70px;
     border-radius: 10px;
-    margin: 20px 100px 20px 0;
+    margin: 20px 100px 20px 50px;
     max-width: 700px;
+   
     
 
 }
@@ -161,11 +162,7 @@ ul li span:hover{
 
 
 
-@media screen and (max-width: 1400px) {
-    .todo-app{
-        margin-left: 50px;
-    }
-}
+
 
 
 
