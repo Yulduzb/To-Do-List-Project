@@ -43,7 +43,7 @@
 
 
     function SaveData(){
-        localStorage.setItem("data",listContainer.inert)
+        localStorage.setItem("data",listContainer.innerHTML)
     }
       
  
