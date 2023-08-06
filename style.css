@@ -237,7 +237,8 @@ img{
    }
 
    .row{
-    width: 250px;
+    width: 300px;
+    
     
 }
 
@@ -249,7 +250,7 @@ background:#ED500A;
 border-radius: 20px;
 color:#FBEAEB;
 font-size: 15px; 
-margin-left: -150px;
+margin-right: 30px;
 }
 
 
